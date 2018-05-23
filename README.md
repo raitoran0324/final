@@ -8,4 +8,6 @@
 6.   每24小時內都成功控制FishTank就能增加一隻魚。
 7.   當不玩遊戲時FishTank會以0.5倍的速度減少水。
 
-![FishTank](/path/to/img.jpg)
+<em>你能擁有多少魚呢</em>
+
+![FishTank](https://github.com/raitoran0324/final/blob/master/FishTank.jpg)
