@@ -5,24 +5,43 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:fishtank"
         mc:Ignorable="d"
-        Title="MainWindow" Height="600" Width="400">
+        Title="FishTank" Height="600" Width="400">
     <Grid>
+
+        
         <Grid.RowDefinitions>
             <RowDefinition Height="250"></RowDefinition>
             <RowDefinition></RowDefinition>
             <RowDefinition Height="150"></RowDefinition>
         </Grid.RowDefinitions>
-
-        <StackPanel Grid.Row="1">
-            <Rectangle Fill="Transparent" Stroke="#FFFFFF4C" StrokeThickness="8" Height="150" Width="360"></Rectangle>
-            <TextBlock x:Name="second" Margin="250 -100 5 100" FontSize="50" Height="80" Width="100" Foreground="#FFFFFF4C" FontWeight="Bold"></TextBlock>
+        
+        <!--幾隻魚-->
+        <StackPanel>
+            
         </StackPanel>
         
+        <!--水-->
+        <Rectangle Grid.Row="0" Fill="#FF48AAAA" x:Name="Full" VerticalAlignment="Bottom"></Rectangle>
+        <Rectangle Grid.Row="1" Fill="#FF48AAAA" x:Name="Mid" VerticalAlignment="Bottom"></Rectangle>
+        <Rectangle Grid.Row="2" Fill="#FF48AAAA" x:Name="Down" VerticalAlignment="Bottom"></Rectangle>
+        
+        <!--計時板-->
+        <StackPanel Grid.Row="1">
+            <Rectangle Fill="Transparent" Stroke="#FFFFFF4C" StrokeThickness="8" Height="150" Width="360"></Rectangle>
+            <TextBlock x:Name="second" Margin="220 -100 15 100" FontSize="50" Height="80" Width="110" Foreground="#FFFFFF4C" FontWeight="Bold"></TextBlock>
+            <TextBlock x:Name="minute" Margin="5 -180 5 100" FontSize="50" Height="80" Width="110" Foreground="#FFFFFF4C" FontWeight="Bold"></TextBlock>
+            <TextBlock x:Name="hour" Margin="-180 -180 5 100" FontSize="50" Height="80" Width="110" Foreground="#FFFFFF4C" FontWeight="Bold"></TextBlock>
+        </StackPanel>
+        
+        <!--基礎水-->
+        <Rectangle Grid.Row="2" Fill="#FF48AAAA" VerticalAlignment="Bottom" Height="20"></Rectangle>
+        
+        <!--按鈕-->
         <StackPanel Grid.Row="2">
             <Button Margin="15 20 200 -30" Background="#FF65F0AA" Foreground="White" Height="50" FontSize="26" BorderBrush="Transparent" Click="Button_Click">START</Button>
             <Button Margin="200 -20 15 50" Background="#FFEE39EE" Foreground="White" Height="50" FontSize="26" BorderBrush="Transparent" x:Name="StopBtn" Click="StopBtn_Click">STOP</Button>
-            <TextBlock Foreground="#FF680B0B" FontSize="24" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="10 -30 10 0">☞玩遊戲前請開始你的魚缸♪</TextBlock>
+            <TextBlock Foreground="#FF680B0B" FontSize="24" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="10 -30 10 0" x:Name="Im">☞玩遊戲前請先開始你的魚缸♪</TextBlock>
         </StackPanel>
-        
+
     </Grid>
 </Window>

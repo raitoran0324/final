@@ -21,7 +21,9 @@ namespace fishtank
     /// </summary>
     public partial class MainWindow : Window
     {
-        int t = 0;
+        int s = 0;
+        int m = 0;
+        int h = 0;
         Timer timer;
 
         public MainWindow()
@@ -36,17 +38,66 @@ namespace fishtank
 
         void timer_TickTock(object Sender, EventArgs e)
         {
-            second.Text = t +"秒";
-            t++;
+            // 計時
+            second.Text = s + "秒";
+            minute.Text = m + "分";
+            hour.Text = h + "時";
+            if(s >= 59)
+            {
+                s = 0;
+                m++;
+                s++;
+            }
+            else
+            {
+                s++;
+            }
+           
+            if(m >= 59)
+            {
+                m = 0;
+                h++;
+                m++;
+            }
+
+            if(h >= 1)
+            {
+                Full.Height = 250;
+                Mid.Height = 200;
+                Down.Height = 150;
+            }
+
+            if(m >= 30)
+            {
+                Full.Height = 100;
+                Mid.Height = 200;
+                Down.Height = 150;
+            }
+
+            if(m >= 15 && m <= 29)
+            {
+                Full.Height = 0;
+                Mid.Height = 100;
+                Down.Height = 150;
+            }
+
+            if(m >= 10 && m <= 14)
+            {
+                Full.Height = 0;
+                Mid.Height = 0;
+                Down.Height = 150;
+            }
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-           timer.Start();
+            // 計時開始
+            timer.Start();
         }
 
         private void StopBtn_Click(object sender, RoutedEventArgs e)
         {
+            //計時暫停
             timer.Stop();
         }
     }
