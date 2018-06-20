@@ -1,0 +1,28 @@
+﻿<Window x:Class="fishtank.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:fishtank"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="600" Width="400">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="250"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="150"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="1">
+            <Rectangle Fill="Transparent" Stroke="#FFFFFF4C" StrokeThickness="8" Height="150" Width="360"></Rectangle>
+            <TextBlock x:Name="second" Margin="250 -100 5 100" FontSize="50" Height="80" Width="100" Foreground="#FFFFFF4C" FontWeight="Bold"></TextBlock>
+        </StackPanel>
+        
+        <StackPanel Grid.Row="2">
+            <Button Margin="15 20 200 -30" Background="#FF65F0AA" Foreground="White" Height="50" FontSize="26" BorderBrush="Transparent" Click="Button_Click">START</Button>
+            <Button Margin="200 -20 15 50" Background="#FFEE39EE" Foreground="White" Height="50" FontSize="26" BorderBrush="Transparent" x:Name="StopBtn" Click="StopBtn_Click">STOP</Button>
+            <TextBlock Foreground="#FF680B0B" FontSize="24" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="10 -30 10 0">☞玩遊戲前請開始你的魚缸♪</TextBlock>
+        </StackPanel>
+        
+    </Grid>
+</Window>
