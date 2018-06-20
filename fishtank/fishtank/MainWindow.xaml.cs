@@ -24,6 +24,7 @@ namespace fishtank
         int s = 0;
         int m = 0;
         int h = 0;
+        int f = 0;
         Timer timer;
 
         public MainWindow()
@@ -60,6 +61,7 @@ namespace fishtank
                 m++;
             }
 
+            // 過一小時
             if(h >= 1)
             {
                 Full.Height = 250;
@@ -67,6 +69,7 @@ namespace fishtank
                 Down.Height = 150;
             }
 
+            // 過三十分鐘
             if(m >= 30)
             {
                 Full.Height = 100;
@@ -74,6 +77,7 @@ namespace fishtank
                 Down.Height = 150;
             }
 
+            // 過十五分鐘以後
             if(m >= 15 && m <= 29)
             {
                 Full.Height = 0;
@@ -81,11 +85,19 @@ namespace fishtank
                 Down.Height = 150;
             }
 
+            // 過十分鐘以後
             if(m >= 10 && m <= 14)
             {
                 Full.Height = 0;
                 Mid.Height = 0;
                 Down.Height = 150;
+            }
+
+            // 一天
+            if(h >= 24)
+            {
+                f++;
+                Fish.Text = "0" + f.ToString();
             }
         }
 

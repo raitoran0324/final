@@ -16,7 +16,16 @@
         </Grid.RowDefinitions>
         
         <!--幾隻魚-->
-        <StackPanel>
+        <StackPanel Grid.Row="0">
+            <TextBlock Background="Transparent" Foreground="#FF39235F" FontSize="90" HorizontalAlignment="Center" FontWeight="Bold" Margin="0,60,0,40" x:Name="Fish">00</TextBlock>
+            
+            <Ellipse Fill="Transparent" Height="70" Width="30" StrokeThickness="5" Stroke="#FF65F0AA" Margin="250,-160,100,40"></Ellipse>
+            <Ellipse Fill="#FF65F0AA"  Height="10" Width="10" StrokeThickness="0" Margin="255,-190,100,40"></Ellipse>
+            <Polygon Points="0,0 0,1 1,1" Fill="Transparent" Width="40" Height="30" Stroke="#FF65F0AA" StrokeThickness="5" Margin="285 -80 100 40">
+                    <Polygon.RenderTransform>
+                        <RotateTransform CenterX="0" CenterY="0" Angle="90" />
+                    </Polygon.RenderTransform>
+            </Polygon>
             
         </StackPanel>
         
